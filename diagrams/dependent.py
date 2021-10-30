@@ -1,5 +1,5 @@
 from helpers import quick_entity, print_attr, parse_attributes
-from obj import Relation, COUNT
+from modules.obj import Relation, COUNT
 
 employee = quick_entity(
     "Employee",

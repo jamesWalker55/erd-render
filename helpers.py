@@ -1,7 +1,7 @@
 import re
 from typing import Sequence
 
-from obj import Entity, Attribute, ATTR
+from modules.obj import Entity, Attribute, ATTR
 
 _ATTR_TYPE_REGEX = re.compile(r"\s*([*+~]*)\s*(.+?)\s*(\[\s*\])?\s*")
 

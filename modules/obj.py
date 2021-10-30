@@ -1,5 +1,5 @@
 from enum import Enum, auto
-from typing import NamedTuple, Union, Sequence
+from typing import Union, Sequence
 
 
 class ATTR(Enum):

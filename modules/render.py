@@ -1,5 +1,3 @@
-from contextlib import contextmanager
-
 from graphviz import Graph
 
 from modules.uid import new as uid

@@ -9,7 +9,7 @@ def render(
     relations: Sequence[Relation],
     filename=None,
     format="pdf",
-    K=0.4,
+    k=0.4,
     repulsive_force=4,
     use_neato=False,
 ):
@@ -24,7 +24,7 @@ def render(
             "graph",
             engine="sfdp",
             graph_attr=(
-                ("K", str(K)),
+                ("K", str(k)),
                 ("repulsiveforce", str(repulsive_force)),
                 ("smoothing", "spring"),
             ),  # space out elements a bit

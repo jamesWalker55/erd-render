@@ -52,6 +52,7 @@ relations = [
         (client, 1),
         (preference, 1),
         name="States",
+        is_identifying=True,
     ),
     Relation(
         (client, 1),

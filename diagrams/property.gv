@@ -24,7 +24,7 @@ graph "graph" {
 	1 -- 13 [headlabel=1 labeldistance=1.5]
 	2 -- 13 [headlabel=1 labeldistance=1.5]
 	3 -- 13 [color="black:black" headlabel=N labeldistance=1.5]
-	14 [label=States]
+	14 [label=States peripheries=2]
 	3 -- 14 [color="black:black" headlabel=1 labeldistance=1.5]
 	5 -- 14 [color="black:black" headlabel=1 labeldistance=1.5]
 	15 [label=Holds]

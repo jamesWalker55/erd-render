@@ -1,0 +1,61 @@
+graph "graph" {
+	graph [overlap=false]
+	node [shape=box]
+	1 [label=PRODUCT]
+	2 [label=STUDENT]
+	3 [label=BOOK]
+	4 [label=CHAPTER peripheries=2]
+	node [shape=diamond]
+	5 [label=CONTAINS peripheries=2]
+	3 -- 5 [headlabel=1 labeldistance=1.5]
+	4 -- 5 [color="black:invis:black" headlabel=N labeldistance=1.5]
+	node [shape=oval]
+	6 [label=NAME]
+	6 -- 1
+	7 [label=<<U>SKU</U>>]
+	7 -- 1
+	8 [label="PRICE EXCL. VAT"]
+	8 -- 1
+	9 [label="VAT RATE"]
+	9 -- 1
+	10 [label="PRICE INCL. VAT" style=dashed]
+	10 -- 1
+	11 [label=<<U>STUDENT ID</U>>]
+	11 -- 2
+	12 [label="LAST NAME"]
+	12 -- 2
+	13 [label="FIRST NAME"]
+	13 -- 2
+	14 [label=AGE style=dashed]
+	14 -- 2
+	15 [label="DATE OF BIRTH"]
+	15 -- 2
+	16 [label=EMAIL peripheries=2]
+	16 -- 2
+	17 [label=MAJOR]
+	17 -- 2
+	18 [label=ADDRESS]
+	18 -- 2
+	19 [label=COUNTRY]
+	19 -- 18
+	20 [label=STATE]
+	20 -- 18
+	21 [label=CITY]
+	21 -- 18
+	22 [label=ZIPCODE]
+	22 -- 18
+	23 [label=STREETNAME]
+	23 -- 18
+	24 [label=STREETNO]
+	24 -- 18
+	25 [label=APARTMENTNO]
+	25 -- 18
+	26 [label=<<U>BOOK ID</U>>]
+	26 -- 3
+	27 [label=TITLE]
+	27 -- 3
+	28 [label=<<U>C</U>H<U>A</U>P<U>T</U>E<U>R</U> <U>I</U>D>]
+	28 -- 4
+	29 [label=TITLE]
+	29 -- 4
+}

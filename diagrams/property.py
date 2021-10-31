@@ -1,4 +1,4 @@
-from helpers import quick_entity, parse_attributes
+from modules.helpers import quick_entity, parse_attributes
 from modules.obj import Relation, COUNT
 from style.chen import render
 

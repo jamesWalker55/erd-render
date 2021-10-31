@@ -3,25 +3,25 @@ from modules.render import ObjGraph
 graph = ObjGraph("chen-custom", engine="neato")
 
 # create entity nodes
-with graph.node_style(shape="box"):
-    course = graph.node("course")
-    institute = graph.node("institute")
-    student = graph.node("student")
+graph.node_style(shape="box")
+course = graph.node("course")
+institute = graph.node("institute")
+student = graph.node("student")
 
 # create property nodes
-with graph.node_style(shape="ellipse"):
-    name1 = graph.node("<X<SUB>1</SUB><SUP>(1)</SUP>>")
-    name2 = graph.node("na  me")
-    name3 = graph.node("name")
-    code = graph.node("code")
-    grade = graph.node("grade")
-    number = graph.node("number")
+graph.node_style(shape="ellipse")
+name1 = graph.node("<X<SUB>1</SUB><SUP>(1)</SUP>>")
+name2 = graph.node("na  me")
+name3 = graph.node("name")
+code = graph.node("code")
+grade = graph.node("grade")
+number = graph.node("number")
 
 # create relation nodes
-with graph.node_style(shape="diamond"):
-    c_i = graph.node("C-I")
-    s_c = graph.node("S-C")
-    s_i = graph.node("S-I")
+graph.node_style(shape="diamond")
+c_i = graph.node("C-I")
+s_c = graph.node("S-C")
+s_i = graph.node("S-I")
 
 graph.edge(name1, course)
 graph.edge(code, course)

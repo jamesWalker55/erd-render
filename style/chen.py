@@ -44,23 +44,23 @@ def render(
     id_map = {}
 
     # create the entities
-    with g.node_style(shape="box"):
-        for entity in entities:
-            assert entity not in id_map
-            draw_entity(g, id_map, entity)
+    g.node_style(shape="box")
+    for entity in entities:
+        assert entity not in id_map
+        draw_entity(g, id_map, entity)
 
     # create the relations
-    with g.node_style(shape="diamond"):
-        for rel in relations:
-            assert rel not in id_map
-            draw_relation(g, id_map, rel)
+    g.node_style(shape="diamond")
+    for rel in relations:
+        assert rel not in id_map
+        draw_relation(g, id_map, rel)
 
     # draw attributes
     attr_holders: Sequence[Union[Entity, Relation]] = [*entities, *relations]
-    with g.node_style(shape="oval"):
-        for obj in attr_holders:
-            for attr in obj.attrs:
-                draw_attribute(g, id_map, id_map[obj], attr)
+    g.node_style(shape="oval")
+    for obj in attr_holders:
+        for attr in obj.attrs:
+            draw_attribute(g, id_map, id_map[obj], attr)
 
     g.render(filename=filename, format=format)
 

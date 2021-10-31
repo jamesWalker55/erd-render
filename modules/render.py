@@ -10,7 +10,6 @@ class ObjGraph:
 
     def __init__(self, *args, **kwargs):
         self.graph = Graph(*args, **kwargs)
-        self._node_styles = []
 
     def node(self, label, **kwargs) -> str:
         """create a node then return its unique id"""
@@ -22,15 +21,9 @@ class ObjGraph:
         """this takes 2 node ids as input, which are returned by the #node method"""
         self.graph.edge(node_a, node_b, label=label, **kwargs)
 
-    @contextmanager
     def node_style(self, **kwargs):
         # set the node style
         self.graph.attr("node", **kwargs)
-        self._node_styles.append(kwargs)
-        yield
-        self._node_styles.pop()
-        if len(self._node_styles) != 0:
-            self.graph.attr("node", **self._node_styles[-1])
 
     def render(self, *args, **kwargs):
         self.graph.render(*args, **kwargs)

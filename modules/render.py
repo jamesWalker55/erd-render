@@ -1,6 +1,6 @@
 from graphviz import Graph
 
-from modules.uid import new as uid
+from erd_render.modules.uid import new as uid
 
 
 class ObjGraph:

@@ -1,6 +1,6 @@
-from modules.helpers import quick_entity
-from modules.obj import Relation, COUNT
-from style.chen import render
+from erd_render.modules.helpers import quick_entity
+from erd_render.modules.obj import Relation, COUNT
+from erd_render.style.chen import render
 
 # https://vertabelo.com/blog/chen-erd-notation/
 

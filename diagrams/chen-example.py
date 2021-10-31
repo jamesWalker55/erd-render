@@ -1,4 +1,4 @@
-from modules.render import ObjGraph
+from erd_render.modules.render import ObjGraph
 
 graph = ObjGraph("chen-custom", engine="neato")
 

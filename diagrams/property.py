@@ -1,6 +1,6 @@
-from modules.helpers import quick_entity, parse_attributes
-from modules.obj import Relation, COUNT
-from style.chen import render
+from erd_render.modules.helpers import quick_entity, parse_attributes
+from erd_render.modules.obj import Relation, COUNT
+from erd_render.style.chen import render
 
 staff = quick_entity("Staff", ["*staffNo"])
 branch = quick_entity("Branch", ["*branchNo"])

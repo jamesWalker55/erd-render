@@ -1,7 +1,7 @@
 from typing import Sequence, Union
 
-from modules.obj import Entity, Relation, COUNT, Attribute, ATTR
-from modules.render import ObjGraph
+from erd_render.modules.obj import Entity, Relation, COUNT, Attribute, ATTR
+from erd_render.modules.render import ObjGraph
 
 
 def render(

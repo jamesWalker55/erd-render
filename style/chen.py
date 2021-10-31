@@ -124,7 +124,7 @@ def draw_relation(
         # get role of this entity
         role = e_info.role
         # if total participation, then draw a double line
-        color = "black:black" if total_parti_map[e_info] else None
+        color = "black:invis:black" if total_parti_map[e_info] else None
 
         eid = id_map[e_info.entity]
         graph.edge(

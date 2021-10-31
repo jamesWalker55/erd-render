@@ -16,9 +16,8 @@ How to install:
 1. Clone this repository
 2. Open a terminal at the root of the repository
 3. Execute the following:
-4. `pip install -e .`
-5. This package will be installed in development mode
-
+4. `pip install .`
+5. This package is installed
 
 Quick start:
 

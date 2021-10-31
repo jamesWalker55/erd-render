@@ -1,0 +1,78 @@
+graph "graph" {
+	graph [K=0.4 repulsiveforce=4 smoothing=spring]
+	node [shape=box]
+	1 [label=Staff]
+	2 [label=Branch]
+	3 [label=Client]
+	4 [label=Lease]
+	5 [label=Preference peripheries=2]
+	6 [label=PropertyForRent]
+	7 [label=PrivateOwner]
+	8 [label=BusinessOwner]
+	9 [label=Newspaper]
+	node [shape=diamond]
+	10 [label=Supervises]
+	1 -- 10 [label=Supervisor headlabel=1 labeldistance=1.5]
+	1 -- 10 [label=Supervisee headlabel=N labeldistance=1.5]
+	11 [label=Manages]
+	1 -- 11 [headlabel=1 labeldistance=1.5]
+	2 -- 11 [color="black:black" headlabel=1 labeldistance=1.5]
+	12 [label=Has]
+	2 -- 12 [color="black:black" headlabel=1 labeldistance=1.5]
+	1 -- 12 [color="black:black" headlabel=N labeldistance=1.5]
+	13 [label=Registers]
+	1 -- 13 [headlabel=1 labeldistance=1.5]
+	2 -- 13 [headlabel=1 labeldistance=1.5]
+	3 -- 13 [color="black:black" headlabel=N labeldistance=1.5]
+	14 [label=States]
+	3 -- 14 [color="black:black" headlabel=1 labeldistance=1.5]
+	5 -- 14 [color="black:black" headlabel=1 labeldistance=1.5]
+	15 [label=Holds]
+	3 -- 15 [headlabel=1 labeldistance=1.5]
+	4 -- 15 [color="black:black" headlabel=N labeldistance=1.5]
+	16 [label=LeasedBy]
+	4 -- 16 [color="black:black" headlabel=N labeldistance=1.5]
+	6 -- 16 [headlabel=1 labeldistance=1.5]
+	17 [label=Oversees]
+	1 -- 17 [headlabel=1 labeldistance=1.5]
+	6 -- 17 [headlabel=N labeldistance=1.5]
+	18 [label=Offers]
+	2 -- 18 [color="black:black" headlabel=1 labeldistance=1.5]
+	6 -- 18 [color="black:black" headlabel=N labeldistance=1.5]
+	19 [label=POwns]
+	7 -- 19 [color="black:black" headlabel=1 labeldistance=1.5]
+	6 -- 19 [headlabel=N labeldistance=1.5]
+	20 [label=BOwns]
+	8 -- 20 [color="black:black" headlabel=1 labeldistance=1.5]
+	6 -- 20 [headlabel=N labeldistance=1.5]
+	21 [label=Advertises]
+	9 -- 21 [color="black:black" headlabel=N labeldistance=1.5]
+	6 -- 21 [headlabel=M labeldistance=1.5]
+	node [shape=oval]
+	22 [label=<<U>staffNo</U>>]
+	22 -- 1
+	23 [label=<<U>branchNo</U>>]
+	23 -- 2
+	24 [label=<<U>clientNo</U>>]
+	24 -- 3
+	25 [label=<<U>leaseNo</U>>]
+	25 -- 4
+	26 [label=<<U>propertyNo</U>>]
+	26 -- 6
+	27 [label=<<U>ownerNo</U>>]
+	27 -- 7
+	28 [label=<<U>bName</U>>]
+	28 -- 8
+	29 [label=<<U>newspaperName</U>>]
+	29 -- 9
+	30 [label=mgrStartDate]
+	30 -- 11
+	31 [label=bonus]
+	31 -- 11
+	32 [label=dateJoined]
+	32 -- 13
+	33 [label=dateAdvert]
+	33 -- 21
+	34 [label=cost]
+	34 -- 21
+}

@@ -1,5 +1,6 @@
-from helpers import quick_entity, print_attr, parse_attributes
+from helpers import quick_entity, parse_attributes
 from modules.obj import Relation, COUNT
+from style.chen import render
 
 employee = quick_entity(
     "Employee",
@@ -75,13 +76,4 @@ relations = [
 ]
 
 if __name__ == "__main__":
-    for ent in entities:
-        print(ent)
-        if ent.is_weak():
-            print(f"{ent.name} is fucking weak")
-        for attr in ent.attrs:
-            print_attr(attr, indent=2)
-        print()
-
-    for rel in relations:
-        print(rel)
+    render(entities, relations, filename="dependent.gv")

@@ -1,0 +1,66 @@
+graph "graph" {
+	graph [K=0.4 repulsiveforce=4 smoothing=spring]
+	node [shape=box]
+	1 [label=Employee]
+	2 [label=Department]
+	3 [label=Project]
+	4 [label=Dependent peripheries=2]
+	node [shape=diamond]
+	5 [label=Supervises]
+	1 -- 5 [label=Supervisee headlabel=N labeldistance=1.5]
+	1 -- 5 [label=Supervisor headlabel=1 labeldistance=1.5]
+	6 [label="Dependents-Of" peripheries=2]
+	4 -- 6 [color="black:black" headlabel=N labeldistance=1.5]
+	1 -- 6 [headlabel=1 labeldistance=1.5]
+	7 [label="Works-On"]
+	1 -- 7 [color="black:black" headlabel=N labeldistance=1.5]
+	3 -- 7 [color="black:black" headlabel=M labeldistance=1.5]
+	8 [label=Controls]
+	3 -- 8 [headlabel=N labeldistance=1.5]
+	2 -- 8 [headlabel=1 labeldistance=1.5]
+	9 [label=Manages]
+	1 -- 9 [headlabel=1 labeldistance=1.5]
+	2 -- 9 [color="black:black" headlabel=1 labeldistance=1.5]
+	10 [label="Works-For"]
+	1 -- 10 [color="black:black" headlabel=N labeldistance=1.5]
+	2 -- 10 [color="black:black" headlabel=1 labeldistance=1.5]
+	node [shape=oval]
+	11 [label=Name]
+	11 -- 1
+	12 [label=Fname]
+	12 -- 11
+	13 [label=Lname]
+	13 -- 11
+	14 [label=Address]
+	14 -- 1
+	15 [label=<<U>NINumber</U>>]
+	15 -- 1
+	16 [label=Salary]
+	16 -- 1
+	17 [label=Sex]
+	17 -- 1
+	18 [label=Birthdate]
+	18 -- 1
+	19 [label=<<U>Name</U>>]
+	19 -- 2
+	20 [label=<<U>Number</U>>]
+	20 -- 2
+	21 [label=Locations peripheries=2]
+	21 -- 2
+	22 [label=<<U>Name</U>>]
+	22 -- 3
+	23 [label=<<U>Number</U>>]
+	23 -- 3
+	24 [label=Location]
+	24 -- 3
+	25 [label=<<U>N</U>a<U>m</U>e>]
+	25 -- 4
+	26 [label=Sex]
+	26 -- 4
+	27 [label=Birthdate]
+	27 -- 4
+	28 [label=Relationship]
+	28 -- 4
+	29 [label=Hours]
+	29 -- 7
+}

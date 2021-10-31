@@ -11,16 +11,24 @@ def render(
     format="pdf",
     K=0.4,
     repulsive_force=4,
+    use_neato=False,
 ):
-    g = ObjGraph(
-        "graph",
-        engine="sfdp",
-        graph_attr=(
-            ("K", str(K)),
-            ("repulsiveforce", str(repulsive_force)),
-            ("smoothing", "spring"),
-        ),  # space out elements a bit
-    )
+    if use_neato:
+        g = ObjGraph(
+            "graph",
+            engine="neato",
+            graph_attr=(("overlap", "false"),),
+        )
+    else:
+        g = ObjGraph(
+            "graph",
+            engine="sfdp",
+            graph_attr=(
+                ("K", str(K)),
+                ("repulsiveforce", str(repulsive_force)),
+                ("smoothing", "spring"),
+            ),  # space out elements a bit
+        )
     id_map = {}
 
     # create the entities

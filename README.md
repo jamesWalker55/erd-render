@@ -2,7 +2,7 @@
 
 ![](docs/er-diagram.png)
 
-_(Diagram source code located at `./erd_render/diagrams/property.py`)_
+_(Diagram source code located at `./tests/property.py`)_
 
 This is a package that lets you declare entity-relation diagrams programmatically and render them with graphviz.
 
@@ -61,4 +61,4 @@ render_chen(
 )
 ```
 
-See `.\erd_render\diagrams` for more code and diagram examples.
+See `./tests` for more code and diagram examples.

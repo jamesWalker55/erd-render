@@ -66,14 +66,14 @@ class EntityInfo:
 
     e.g. people have many pens; each pen is owned by 1 person;
     (person, 1),
-    (pen, COUNT.HAS_MANY),
+    (pen, COUNT.ANY),
 
     e.g.
     1. doctor with a patient can have **many** treatments;
     2. doctor with a treatment can have **many** patients;
     3. patient with a treatment can be from **one** doctor;
-    (patient, COUNT.MANY)
-    (treatment, COUNT.MANY)
+    (patient, COUNT.ANY)
+    (treatment, COUNT.ANY)
     (doctor, 1),
     """
 
@@ -99,7 +99,7 @@ class Relation:
         """create a relation between 2 entities
 
         :param entities: the entities that this relation connects to. you can provide a count and role for each entity
-        by using a tuple
+               by using a tuple
         :param name: the name of the relation
         :param is_identifying: whether this relation is used to identify a weak entity type
         :param attributes: attributes of this relation

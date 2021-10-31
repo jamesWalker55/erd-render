@@ -13,6 +13,18 @@ def render(
     repulsive_force=4,
     use_neato=False,
 ):
+    """
+    render the given Entities and Relations to an ER diagram using Chan's notation, defaults to using the `sfdp` engine
+
+    :param entities: a list of Entities. all entities that are part of a relation must appear here
+    :param relations: a list of Relations
+    :param filename: the path to output the generated graphviz source and diagram
+    :param format: the output format, like "png" or "pdf"
+    :param k: spring constant for node placement: https://graphviz.org/docs/attrs/K/
+    :param repulsive_force: the repulsive force for node placement: https://graphviz.org/docs/attrs/repulsiveforce/
+    :param use_neato: use `neato` as the node placement engine instead of `sfdp`, this disables the parameters `k`
+           and `repulsive_force`
+    """
     if use_neato:
         g = ObjGraph(
             "graph",

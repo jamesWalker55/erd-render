@@ -10,6 +10,9 @@ class ObjGraph:
 
     def __init__(self, *args, **kwargs):
         self.graph = Graph(*args, **kwargs)
+        self.render = self.graph.render
+        self.view = self.graph.view
+        self.save = self.graph.save
 
     def node(self, label, **kwargs) -> str:
         """create a node then return its unique id"""
@@ -24,12 +27,3 @@ class ObjGraph:
     def node_style(self, **kwargs):
         # set the node style
         self.graph.attr("node", **kwargs)
-
-    def render(self, *args, **kwargs):
-        self.graph.render(*args, **kwargs)
-
-    def view(self, *args, **kwargs):
-        self.graph.view(*args, **kwargs)
-
-    def save(self, *args, **kwargs):
-        self.graph.save(*args, **kwargs)

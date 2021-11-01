@@ -40,7 +40,6 @@ def render(
                 ("overlap_scaling", str(overlap_scaling)),
                 ("K", str(k)),
                 ("repulsiveforce", str(repulsive_force)),
-                ("smoothing", "spring"),
             ),  # space out elements a bit
         )
     id_map = {}

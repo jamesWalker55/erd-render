@@ -11,6 +11,7 @@ def render(
     format="pdf",
     k=0.4,
     repulsive_force=4,
+    overlap_scaling=-4,
     use_neato=False,
 ):
     """
@@ -36,6 +37,7 @@ def render(
             "graph",
             engine="sfdp",
             graph_attr=(
+                ("overlap_scaling", str(overlap_scaling)),
                 ("K", str(k)),
                 ("repulsiveforce", str(repulsive_force)),
                 ("smoothing", "spring"),

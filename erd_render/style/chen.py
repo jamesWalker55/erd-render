@@ -9,8 +9,8 @@ def render(
     relations: Sequence[Relation],
     filename=None,
     format="pdf",
-    k=0.4,
-    repulsive_force=4,
+    k=0.3,
+    repulsive_force=1.0,
     overlap_scaling=-4,
     use_neato=False,
 ):

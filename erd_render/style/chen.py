@@ -37,6 +37,7 @@ def render(
             "graph",
             engine="sfdp",
             graph_attr=(
+                ("overlap", "prism"),
                 ("overlap_scaling", str(overlap_scaling)),
                 ("K", str(k)),
                 ("repulsiveforce", str(repulsive_force)),
